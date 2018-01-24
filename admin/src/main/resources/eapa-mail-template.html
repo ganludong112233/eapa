@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table {
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-collapse: collapse;
+}
+
+h1 {
+	color: blank
+}
+
+table th,table td {
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 8px;
+	text-align: left;
+}
+
+table .back {
+	background-color: #dedede;
+}
+</style>
+</head>
+<body>
+	<div>
+
+		<p>Dear %TARGET%,</p>
+		<p>The Project of %PROJECT_NAME% has exception be catched. Please
+			take care of and process it as soon as possible.</p>
+		<h3>Error Detail:</h3>
+		<table>
+			<tr>
+				<td class="back">Project ID</ td>
+				<td>%PROJECT_ID%</td>
+				<!-- 				<th>CPU Usage</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Project Name</td>
+				<td>%PROJECT_NAME%</td>
+				<!-- 				<th>Memory Usage</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Module</td>
+				<td>%MODULE%</td>
+
+				<!-- 				<th>Patition Usage</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Occur Time</td>
+				<td>%OCCUR_TIME%</td>
+			</tr>
+			<tr>
+				<td class="back">IP</td>
+				<td>%IP%</td>
+			</tr>
+			<tr>
+				<td class="back">Exception Name</td>
+				<td>%EXCEPTION_NAME%</td>
+
+				<!-- 				<th>NetWork Speed</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Request UrI</td>
+				<td>%REQUEST_URI%</td>
+
+				<!-- 				<th>IO Percent</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Request Method</td>
+				<td>%REQUEST_METHOD%</td>
+
+				<!-- 				<th>BandWidth</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Handler Class</td>
+				<td>%HANDLER_CLASS%</td>
+
+				<!-- 				<th>Running Task</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Paramter</td>
+				<td>%PARAMTER%</td>
+
+				<!-- 				<th>Total Physical Memory Size</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Headers</td>
+				<td>%HEADERS%</td>
+
+				<!-- 				<th>Free Physical Memory Size</th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Handler Method</td>
+				<td>%HANDLER_METHOD%</td>
+
+				<!-- 				<th></th> -->
+				<!-- 				<td></td> -->
+			</tr>
+			<tr>
+				<td class="back">Error Message</td>
+				<td>%ERROR_MESSAGE%</td>
+
+				<!-- 				<th></th> -->
+				<!-- 				<td></td> -->
+			</tr>
+
+		</table>
+		<p>
+			BR,<br /> EAPA Project Team
+		</p>
+	</div>
+
+</body>
+</html>

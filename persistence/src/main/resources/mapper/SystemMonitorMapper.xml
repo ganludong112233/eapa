@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tcl.ep.persistence.dao.SystemMonitorDao">
+	<resultMap id="BaseResultMap" type="com.tcl.ep.persistence.vo.ExceptionModuleStatisticDto">
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="cpu_usage" property="module" jdbcType="VARCHAR" />
+		<result column="mem_usage" property="testExceptionTotal" jdbcType="VARCHAR"/>
+		<result column="partition_usage" property="proExceptionTotal" jdbcType="VARCHAR"/>
+		<result column="network_speed" property="exceptionTotal" jdbcType="VARCHAR"/>
+		<result column="harddisk_io_speed" property="hardDiskIOSpeed" jdbcType="VARCHAR"/>
+		<result column="collect_time" property="collectTime" jdbcType="VARCHAR"/>
+
+	</resultMap>
+
+	<select id="findSystemMonitorList" resultMap="BaseResultMap">
+		SELECT p.project_name,si.cpu_usage, mem_usage, partition_usage,
+		harddisk_io_speed, harddisk_io_speed, collect_time
+		FROM ep_system_info si
+		INNER JOIN ep_project p ON si.project_id = p.project_id AND si.collect_time BETWEEN #{startDate} AND #{endDate}
+		WHERE p.status=0
+		<if test="projectName != null">
+			AND p.project_name = #{projectName}
+		</if>
+	</select>
+</mapper>

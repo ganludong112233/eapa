@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tcl.ep.persistence.dao.ExceptionInfoDao">
+	<resultMap id="BaseResultMap" type="com.tcl.ep.persistence.vo.ExceptionInfoVo">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<id column="project_id" property="projectId" jdbcType="BIGINT" />
+		<result column="exception_name" property="exceptionName" jdbcType="VARCHAR" />
+		<result column="occur_time" property="occurTime" jdbcType="BIGINT" />
+		<result column="parameter" property="parameter" jdbcType="VARCHAR" />
+		<result column="module" property="module" jdbcType="VARCHAR" />
+		<result column="error_msg" property="errorMsg" jdbcType="VARCHAR" />
+		<result column="uri" property="uri" jdbcType="VARCHAR" />
+		<result column="headers" property="headers" jdbcType="VARCHAR" />
+		<result column="request_method" property="requestMethod"
+			jdbcType="VARCHAR" />
+		<result column="handler_method" property="handlerMethod"
+			jdbcType="VARCHAR" />
+		<result column="handler_class" property="handlerClass"
+			jdbcType="VARCHAR" />
+		<result column="handler_line" property="handlerLine" jdbcType="INTEGER" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="env" property="env" jdbcType="VARCHAR" />
+		<result column="extra_information" property="extraInformation" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		exception_name, occur_time, parameter,
+		module,error_msg,
+		uri, headers, request_method,
+		ip,handler_method,handler_class,handler_line,env,extra_information
+	</sql>
+	<select id="findById" resultMap="BaseResultMap">
+		select ee.id,ee.project_id,
+		<include refid="Base_Column_List" />
+		,project_name from ep_exception_info ee join ep_project ep
+		on ee.project_id=ep.project_id where ee.id=#{id}
+	</select>
+
+	<select id="findTotal" resultType="Integer" >
+	    select count(1) from ep_exception_info ee join ep_project ep
+		on
+		ee.project_id=ep.project_id where 1=1 
+		<if test="projectId != null">
+			and ee.project_id=#{projectId}
+		</if>
+		<if test="module != null">
+			and ee.module=#{module}
+		</if>
+		<if test="exceptionName != null">
+			and ee.exception_name like CONCAT('%',#{exceptionName},'%')
+		</if>
+		<if test="env != null">
+			and ee.env=#{env}
+		</if>
+		<if test="errorMsg != null">
+			and ee.error_msg like CONCAT('%',#{errorMsg},'%')
+		</if>
+		<if test="ip != null">
+			and ee.ip =#{ip}
+		</if>
+		<if test="startDate != null">
+			and ee.occur_time &gt;= #{startDate}
+		</if>
+		<if test="startDate != null">
+			and ee.occur_time &lt;= #{endDate}
+		</if>
+		  
+	</select>
+
+
+	<select id="findList" resultMap="BaseResultMap">
+		select ee.id,ee.project_id,
+		<include refid="Base_Column_List" />
+		,project_name from ep_exception_info ee join ep_project ep
+		on ee.project_id=ep.project_id where 1=1 
+		<if test="projectId != null">
+			and ee.project_id=#{projectId}
+		</if>
+		<if test="module != null">
+			and ee.module=#{module}
+		</if>
+		<if test="exceptionName != null">
+			and ee.exception_name like CONCAT('%',#{exceptionName},'%')
+		</if>
+		<if test="env != null">
+			and ee.env=#{env}
+		</if>
+		<if test="ip != null">
+			and ee.ip =#{ip}
+		</if>
+		<if test="errorMsg != null">
+			and ee.error_msg like CONCAT('%',#{errorMsg},'%')
+		</if>
+		<if test="startDate != null">
+			and ee.occur_time &gt;= #{startDate}
+		</if>
+		<if test="startDate != null">
+			and ee.occur_time &lt;= #{endDate}
+		</if>
+		order by occur_time desc
+		  limit #{startItem},#{pageSize}
+	</select>
+
+<select id="findModules" resultType="java.lang.String">
+	select distinct(module) from ep_exception_info 
+	<if test="projectId!=null">
+	 	where project_id=#{projectId}
+	</if>
+</select>
+
+	<insert id="insert" parameterType="com.tcl.ep.persistence.entity.ExceptionInfo">
+		insert into ep_exception_info
+		(id, project_id, exception_name,
+		occur_time, parameter, module,
+		error_msg, uri,
+		headers, request_method,
+		ip,handler_method,handler_class,handler_line,env,extra_information
+		)
+		values
+		(#{id,jdbcType=BIGINT}, #{projectId,jdbcType=BIGINT},
+		#{exceptionName,jdbcType=VARCHAR},
+		#{occurTime,jdbcType=BIGINT},
+		#{parameter,jdbcType=VARCHAR}, #{module,jdbcType=VARCHAR},
+		#{errorMsg,jdbcType=VARCHAR}, #{uri,jdbcType=VARCHAR},
+		#{headers,jdbcType=VARCHAR}, #{requestMethod,jdbcType=VARCHAR},
+		#{ip,jdbcType=VARCHAR},
+		#{handlerMethod,jdbcType=VARCHAR},#{handlerClass,jdbcType=VARCHAR},
+		#{handlerLine,jdbcType=INTEGER},#{env,jdbcType=VARCHAR},
+		#{extraInformation,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<update id="updateByPrimaryKey" parameterType="com.tcl.ep.persistence.entity.ExceptionInfo">
+		update
+		ep_exception_info
+		set exception_name =
+		#{exceptionName,jdbcType=VARCHAR},
+		occur_time =
+		#{occurTime,jdbcType=BIGINT},
+		parameter =
+		#{parameter,jdbcType=VARCHAR},
+		module = #{module,jdbcType=VARCHAR},
+		error_msg = #{errorMsg,jdbcType=VARCHAR},
+		uri =
+		#{uri,jdbcType=VARCHAR},
+		headers = #{headers,jdbcType=VARCHAR},
+		request_method = #{requestMethod,jdbcType=VARCHAR},
+		ip =
+		#{ip,jdbcType=VARCHAR},handler_method =
+		#{handlerMethod,jdbcType=VARCHAR},
+		handler_class =
+		#{handlerClass,jdbcType=VARCHAR},
+		handler_line =
+		#{handlerLine,jdbcType=INTEGER},
+		env=
+		#{env,jdbcType=VARCHAR},
+		extra_information=
+		#{extraInformation,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=BIGINT}
+		and
+		project_id = #{projectId,jdbcType=BIGINT}
+	</update>
+</mapper>

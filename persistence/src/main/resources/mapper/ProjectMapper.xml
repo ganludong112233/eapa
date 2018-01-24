@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tcl.ep.persistence.dao.ProjectDao">
+	<resultMap id="BaseResultMap" type="com.tcl.ep.persistence.entity.Project">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="project_id" property="projectId" jdbcType="BIGINT" />
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="to_emails" property="toEmails" jdbcType="VARCHAR" />
+		<result column="to_phones" property="toPhones" jdbcType="VARCHAR" />
+		<result column="warn_exception" property="warnException"
+			jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+
+		id, project_id, project_name, to_emails <!--, to_phones, warn_exception -->
+	</sql>
+
+	<select id="findProjects" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from ep_project
+		WHERE 1 = 1
+		<if test="projectId != null and projectId != 0">
+			AND project_id = #{projectId}
+		</if>
+		<if test="projectName != null">
+			AND project_name like CONCAT('%',#{projectName},'%')
+		</if>
+		<if test="toEmails != null">
+			AND to_emails like CONCAT('%',#{toEmails},'%')
+		</if>
+		<if test="toPhones != null">
+			AND to_phones like CONCAT('%',#{toPhones},'%')
+		</if>
+		<if test="warnException != null">
+			AND warn_exception like CONCAT('%',#{warnException},'%')
+		</if>
+		AND status = 0
+	</select>
+
+	<select id="findByProjectId" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from ep_project
+		where project_id = #{projectId,jdbcType=BIGINT}
+	</select>
+
+	<select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from ep_project
+		where project_name = #{projectName,jdbcType=BIGINT}
+	</select>
+
+	<select id="findMaxProjectId" resultType="java.lang.Long">
+		select max(project_id) from ep_project;
+	</select>
+
+	<update id="updateStatus">
+		UPDATE ep_project
+		SET status = #{status}
+		where project_id = #{projectId,jdbcType=BIGINT}
+	</update>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from ep_project
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+
+	<insert id="insert" parameterType="com.tcl.ep.persistence.entity.Project">
+		insert into ep_project ( project_id, project_name, to_emails)
+		values (#{projectId,jdbcType=BIGINT}, #{projectName,jdbcType=VARCHAR},
+		#{toEmails,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.tcl.ep.persistence.entity.Project">
+		insert into ep_project
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="projectId != null">
+				project_id,
+			</if>
+			<if test="projectName != null">
+				project_name,
+			</if>
+			<if test="toEmails != null">
+				to_emails,
+			</if>
+			<!-- <if test="toPhones != null" > -->
+			<!-- to_phones, -->
+			<!-- </if> -->
+			<!-- <if test="warnException != null" > -->
+			<!-- warn_exception, -->
+			<!-- </if> -->
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="projectId != null">
+				#{projectId,jdbcType=BIGINT},
+			</if>
+			<if test="projectName != null">
+				#{projectName,jdbcType=VARCHAR},
+			</if>
+			<if test="toEmails != null">
+				#{toEmails,jdbcType=VARCHAR},
+			</if>
+			<!-- <if test="toPhones != null" > -->
+			<!-- #{toPhones,jdbcType=VARCHAR}, -->
+			<!-- </if> -->
+			<!-- <if test="warnException != null" > -->
+			<!-- #{warnException,jdbcType=VARCHAR}, -->
+			<!-- </if> -->
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.tcl.ep.persistence.entity.Project">
+		update ep_project
+		<set>
+			<if test="projectId != null">
+				project_id = #{projectId,jdbcType=BIGINT},
+			</if>
+			<if test="projectName != null">
+				project_name = #{projectName,jdbcType=VARCHAR},
+			</if>
+			<if test="toEmails != null">
+				to_emails = #{toEmails,jdbcType=VARCHAR}
+			</if>
+			<!-- <if test="toPhones != null" > -->
+			<!-- to_phones = #{toPhones,jdbcType=VARCHAR}, -->
+			<!-- </if> -->
+			<!-- <if test="warnException != null" > -->
+			<!-- warn_exception = #{warnException,jdbcType=VARCHAR}, -->
+			<!-- </if> -->
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	<update id="update" parameterType="com.tcl.ep.persistence.entity.Project">
+		update ep_project
+		set
+		project_name = #{projectName,jdbcType=VARCHAR},
+		to_emails = #{toEmails,jdbcType=VARCHAR}
+		<!-- to_phones = #{toPhones,jdbcType=VARCHAR}, -->
+		<!-- warn_exception = #{warnException,jdbcType=VARCHAR} -->
+		where project_id = #{projectId,jdbcType=BIGINT}
+	</update>
+</mapper>

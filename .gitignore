@@ -1,0 +1,13 @@
+.classpath
+.project
+.settings
+*.iml
+*/*.iml
+classes
+*.class
+/build
+*target
+*test-output
+.idea/
+webapp/src/main/webapp/node_modules/
+mobile/src/main/webapp/node_modules/

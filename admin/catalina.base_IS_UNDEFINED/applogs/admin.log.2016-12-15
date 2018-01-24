@@ -1,0 +1,1349 @@
+09:51:15.100  [qtp1060770712-1308] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+09:51:15.126  [qtp1060770712-1308] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c919574] was not registered for synchronization because synchronization is not active
+09:51:15.127  [qtp1060770712-1308] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@58cf53af] will not be managed by Spring
+09:51:15.127  [qtp1060770712-1308] DEBUG
+				findById:139 - ==>  Preparing: select * from ep_exception_info where id=? 
+09:51:15.128  [qtp1060770712-1308] DEBUG
+				findById:139 - ==> Parameters: 299(Long)
+09:51:15.131  [qtp1060770712-1308] DEBUG
+				findById:139 - <==      Total: 1
+09:51:15.132  [qtp1060770712-1308] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c919574]
+09:51:24.264  [qtp1060770712-1309] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+09:51:24.265  [qtp1060770712-1309] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bbd7d3c] was not registered for synchronization because synchronization is not active
+09:51:24.265  [qtp1060770712-1309] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6d75d358] will not be managed by Spring
+09:51:24.265  [qtp1060770712-1309] DEBUG
+				findById:139 - ==>  Preparing: select * from ep_exception_info where id=? 
+09:51:24.266  [qtp1060770712-1309] DEBUG
+				findById:139 - ==> Parameters: 299(Long)
+09:51:24.267  [qtp1060770712-1309] DEBUG
+				findById:139 - <==      Total: 1
+09:51:24.268  [qtp1060770712-1309] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bbd7d3c]
+10:28:33.857  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:28:33.862  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:28:33.908  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:28:33.919  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:28:33.999  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:33:46.609  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:33:46.614  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:33:46.658  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:33:46.670  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:33:46.680  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:38:44.271  [qtp1060770712-1357] INFO 
+				ProjectController:66 - ProjectController list
+10:38:44.275  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:38:44.278  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a10c921] was not registered for synchronization because synchronization is not active
+10:38:44.430  [qtp1060770712-1357] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2143faab] will not be managed by Spring
+10:38:44.431  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:38:44.441  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==> Parameters: 
+10:38:44.448  [qtp1060770712-1357] DEBUG
+				findAll:139 - <==      Total: 1
+10:38:44.451  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a10c921]
+10:40:18.453  [qtp1060770712-1357] INFO 
+				ProjectController:66 - ProjectController list
+10:40:18.453  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:40:18.454  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63e4ea72] was not registered for synchronization because synchronization is not active
+10:40:18.454  [qtp1060770712-1357] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@62f6d421] will not be managed by Spring
+10:40:18.454  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:40:18.454  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==> Parameters: 
+10:40:18.456  [qtp1060770712-1357] DEBUG
+				findAll:139 - <==      Total: 1
+10:40:18.456  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63e4ea72]
+10:40:45.079  [qtp1060770712-1360] INFO 
+				ProjectController:66 - ProjectController list
+10:40:45.079  [qtp1060770712-1360] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:40:45.079  [qtp1060770712-1360] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b87dba9] was not registered for synchronization because synchronization is not active
+10:40:45.079  [qtp1060770712-1360] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@40e4e60c] will not be managed by Spring
+10:40:45.080  [qtp1060770712-1360] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:40:45.080  [qtp1060770712-1360] DEBUG
+				findAll:139 - ==> Parameters: 
+10:40:45.081  [qtp1060770712-1360] DEBUG
+				findAll:139 - <==      Total: 1
+10:40:45.081  [qtp1060770712-1360] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b87dba9]
+10:41:06.330  [qtp1060770712-1357] INFO 
+				ProjectController:66 - ProjectController list
+10:41:06.331  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:41:06.332  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a2db264] was not registered for synchronization because synchronization is not active
+10:41:06.333  [qtp1060770712-1357] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2ae43c5d] will not be managed by Spring
+10:41:06.333  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:41:06.334  [qtp1060770712-1357] DEBUG
+				findAll:139 - ==> Parameters: 
+10:41:06.335  [qtp1060770712-1357] DEBUG
+				findAll:139 - <==      Total: 1
+10:41:06.336  [qtp1060770712-1357] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a2db264]
+10:43:22.450  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:43:22.455  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:43:22.500  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:43:22.513  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:43:22.523  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:43:52.660  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:43:52.666  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:43:52.710  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:43:52.721  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:43:52.730  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:45:54.041  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:45:54.046  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:45:54.089  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:45:54.100  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:45:54.109  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:49:56.215  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:49:56.220  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:49:56.263  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:49:56.274  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:49:56.284  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:50:26.607  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:50:26.612  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:50:26.653  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:50:26.667  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:50:26.682  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:51:06.936  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:51:06.940  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:51:06.983  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:51:06.995  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:51:07.004  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:52:15.028  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:52:15.035  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:52:15.128  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:52:15.151  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:52:15.169  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:52:27.436  [qtp138922660-683] INFO 
+				ProjectController:66 - ProjectController list
+10:52:27.440  [qtp138922660-683] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:52:27.443  [qtp138922660-683] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a5b2b1a] was not registered for synchronization because synchronization is not active
+10:52:27.606  [qtp138922660-683] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4e23a782] will not be managed by Spring
+10:52:27.617  [qtp138922660-683] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:52:27.638  [qtp138922660-683] DEBUG
+				findAll:139 - ==> Parameters: 
+10:52:27.655  [qtp138922660-683] DEBUG
+				findAll:139 - <==      Total: 1
+10:52:27.659  [qtp138922660-683] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a5b2b1a]
+10:52:27.781  [qtp138922660-696] DEBUG
+				ProjectServiceImpl:74 - project information:com.tcl.ep.biz.vo.ProjectInfoVo@d741f0d[id=<null>,projectId=10001,projectName=wemedia-web,toEmails=huan.yang@tcl.com,toPhones=28329874,warnException=ParamException]
+10:52:27.784  [qtp138922660-696] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:52:27.784  [qtp138922660-696] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@781d508b] was not registered for synchronization because synchronization is not active
+10:52:27.784  [qtp138922660-696] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11160258] will not be managed by Spring
+10:52:27.785  [qtp138922660-696] DEBUG
+				update:139 - ==>  Preparing: update ep_project set project_name = ?, to_emails = ?, to_phones = ?, warn_exception = ? where project_id = ? 
+10:52:27.785  [qtp138922660-696] DEBUG
+				update:139 - ==> Parameters: wemedia-web(String), huan.yang@tcl.com(String), 28329874(String), ParamException(String), null
+10:52:27.787  [qtp138922660-696] DEBUG
+				update:139 - <==    Updates: 0
+10:52:27.788  [qtp138922660-696] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@781d508b]
+10:53:49.295  [qtp138922660-683] INFO 
+				ProjectController:66 - ProjectController list
+10:53:49.295  [qtp138922660-683] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:53:49.295  [qtp138922660-683] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60280b2e] was not registered for synchronization because synchronization is not active
+10:53:49.295  [qtp138922660-683] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@26b82460] will not be managed by Spring
+10:53:49.296  [qtp138922660-683] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:53:49.296  [qtp138922660-683] DEBUG
+				findAll:139 - ==> Parameters: 
+10:53:49.298  [qtp138922660-683] DEBUG
+				findAll:139 - <==      Total: 1
+10:53:49.298  [qtp138922660-683] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60280b2e]
+10:55:29.063  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:55:29.068  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:55:29.122  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:55:29.141  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:55:29.299  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:55:56.997  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+10:55:57.005  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+10:55:57.120  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+10:55:57.144  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+10:55:57.163  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+10:56:03.616  [qtp705072408-15] INFO 
+				ProjectController:66 - ProjectController list
+10:56:14.289  [qtp705072408-15] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+10:56:14.303  [qtp705072408-15] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22c948ad] was not registered for synchronization because synchronization is not active
+10:56:14.638  [qtp705072408-15] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@78944e57] will not be managed by Spring
+10:56:14.681  [qtp705072408-15] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+10:56:14.869  [qtp705072408-15] DEBUG
+				findAll:139 - ==> Parameters: 
+10:56:15.024  [qtp705072408-15] DEBUG
+				findAll:139 - <==      Total: 1
+10:56:15.031  [qtp705072408-15] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22c948ad]
+11:00:06.698  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+11:00:06.705  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+11:00:06.777  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+11:00:06.800  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+11:00:06.818  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+11:00:10.856  [qtp1334148194-13] INFO 
+				ProjectController:66 - ProjectController list
+11:00:10.860  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+11:00:10.862  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f19bdcd] was not registered for synchronization because synchronization is not active
+11:00:11.006  [qtp1334148194-13] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4241986c] will not be managed by Spring
+11:00:11.010  [qtp1334148194-13] DEBUG
+				findAll:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project 
+11:00:11.029  [qtp1334148194-13] DEBUG
+				findAll:139 - ==> Parameters: 
+11:00:11.043  [qtp1334148194-13] DEBUG
+				findAll:139 - <==      Total: 1
+11:00:11.047  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f19bdcd]
+11:00:26.986  [qtp1334148194-13] DEBUG
+				ProjectServiceImpl:78 - project information:com.tcl.ep.biz.vo.ProjectInfoVo@35195bb2[projectId=10001,projectName=wemedia-web,toEmails=huan.yang@tcl.com,toPhones=28329874,warnException=ParamException]
+11:00:26.987  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+11:00:26.988  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45dca5ce] was not registered for synchronization because synchronization is not active
+11:00:26.988  [qtp1334148194-13] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@45ad44b8] will not be managed by Spring
+11:00:26.988  [qtp1334148194-13] DEBUG
+				update:139 - ==>  Preparing: update ep_project set project_name = ?, to_emails = ?, to_phones = ?, warn_exception = ? where project_id = ? 
+11:00:26.988  [qtp1334148194-13] DEBUG
+				update:139 - ==> Parameters: wemedia-web(String), huan.yang@tcl.com(String), 28329874(String), ParamException(String), null
+11:00:26.991  [qtp1334148194-13] DEBUG
+				update:139 - <==    Updates: 0
+11:00:26.991  [qtp1334148194-13] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45dca5ce]
+12:01:15.251  [qtp1334148194-90] DEBUG
+				ProjectServiceImpl:78 - project information:com.tcl.ep.biz.vo.ProjectInfoVo@be5c44b[projectId=10001,projectName=wemedia-web,toEmails=huan.yang@tcl.com,toPhones=28329874,warnException=ParamException]
+12:01:15.251  [qtp1334148194-90] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:01:15.251  [qtp1334148194-90] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19ba1e07] was not registered for synchronization because synchronization is not active
+12:01:15.252  [qtp1334148194-90] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@45061ea3] will not be managed by Spring
+12:01:15.252  [qtp1334148194-90] DEBUG
+				update:139 - ==>  Preparing: update ep_project set project_name = ?, to_emails = ?, to_phones = ?, warn_exception = ? where project_id = ? 
+12:01:15.252  [qtp1334148194-90] DEBUG
+				update:139 - ==> Parameters: wemedia-web(String), huan.yang@tcl.com(String), 28329874(String), ParamException(String), null
+12:01:15.255  [qtp1334148194-90] DEBUG
+				update:139 - <==    Updates: 0
+12:01:15.255  [qtp1334148194-90] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19ba1e07]
+12:08:59.624  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:08:59.629  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:08:59.682  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:08:59.701  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:08:59.718  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:09:09.746  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:09:09.752  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:09:09.805  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:09:09.822  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:09:09.837  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:09:11.983  [qtp1334148194-97] DEBUG
+				ProjectServiceImpl:78 - project information:com.tcl.ep.biz.vo.ProjectInfoVo@5f7bed24[projectId=10001,projectName=wemedia-web,toEmails=huan.yang@tcl.com,toPhones=28329874,warnException=ParamException]
+12:09:11.989  [qtp1334148194-97] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:09:11.992  [qtp1334148194-97] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626a7460] was not registered for synchronization because synchronization is not active
+12:09:12.180  [qtp1334148194-97] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@df60be5] will not be managed by Spring
+12:09:12.182  [qtp1334148194-97] DEBUG
+				update:139 - ==>  Preparing: update ep_project set project_name = ?, to_emails = ?, to_phones = ?, warn_exception = ? where project_id = ? 
+12:09:12.192  [qtp1334148194-97] DEBUG
+				update:139 - ==> Parameters: wemedia-web(String), huan.yang@tcl.com(String), 28329874(String), ParamException(String), 10001(Long)
+12:09:12.248  [qtp1334148194-97] DEBUG
+				update:139 - <==    Updates: 1
+12:09:12.249  [qtp1334148194-97] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626a7460]
+12:11:41.020  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:11:41.025  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:11:41.073  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:11:41.151  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:11:41.162  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:13:01.844  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:13:01.849  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:13:01.901  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:13:01.914  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:13:01.925  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+13:57:16.773  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+13:57:16.780  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+13:57:16.855  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+13:57:16.878  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+13:57:16.895  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+15:53:22.165  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+15:53:22.172  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+15:53:22.252  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+15:53:22.275  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+15:53:22.293  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+19:19:30.174  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+19:19:30.181  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+19:19:30.258  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+19:19:30.283  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+19:19:30.301  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:30:17.863  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:30:17.870  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:30:17.945  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:30:17.969  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:30:17.986  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:30:23.189  [qtp301519784-12] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@59b187ea[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,pageNo=1,pageSize=30]
+12:30:23.197  [qtp301519784-12] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:30:23.199  [qtp301519784-12] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14b443e8] was not registered for synchronization because synchronization is not active
+12:30:23.378  [qtp301519784-12] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@31282abf] will not be managed by Spring
+12:30:23.383  [qtp301519784-12] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+12:30:23.404  [qtp301519784-12] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+12:30:23.421  [qtp301519784-12] DEBUG
+				findTotal:139 - <==      Total: 1
+12:30:23.424  [qtp301519784-12] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14b443e8]
+12:30:23.425  [qtp301519784-12] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:30:23.425  [qtp301519784-12] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48119f5a] was not registered for synchronization because synchronization is not active
+12:30:23.426  [qtp301519784-12] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@35683a4b] will not be managed by Spring
+12:30:23.426  [qtp301519784-12] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+12:30:23.426  [qtp301519784-12] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+12:30:23.431  [qtp301519784-12] DEBUG
+				findList:139 - <==      Total: 9
+12:30:23.432  [qtp301519784-12] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48119f5a]
+12:30:23.432  [qtp301519784-12] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:30:23.432  [qtp301519784-12] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61fecefd] was not registered for synchronization because synchronization is not active
+12:30:23.433  [qtp301519784-12] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6ffe6579] will not be managed by Spring
+12:30:23.433  [qtp301519784-12] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+12:30:23.434  [qtp301519784-12] DEBUG
+				findProjects:139 - ==> Parameters: 
+12:30:23.436  [qtp301519784-12] DEBUG
+				findProjects:139 - <==      Total: 4
+12:30:23.436  [qtp301519784-12] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61fecefd]
+12:30:39.342  [qtp301519784-36] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:30:39.342  [qtp301519784-36] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35af181f] was not registered for synchronization because synchronization is not active
+12:30:39.342  [qtp301519784-36] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3065aeb6] will not be managed by Spring
+12:30:39.343  [qtp301519784-36] DEBUG
+				findById:139 - ==>  Preparing: select * from ep_exception_info where id=? 
+12:30:39.343  [qtp301519784-36] DEBUG
+				findById:139 - ==> Parameters: 299(Long)
+12:30:39.346  [qtp301519784-36] DEBUG
+				findById:139 - <==      Total: 1
+12:30:39.346  [qtp301519784-36] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35af181f]
+12:31:41.213  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:31:41.222  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:31:41.302  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:31:41.336  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:31:41.356  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:33:11.846  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:33:11.854  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:33:11.932  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:33:11.957  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:33:11.977  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:33:24.434  [qtp301519784-19] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+12:33:24.436  [qtp301519784-19] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72476c5] was not registered for synchronization because synchronization is not active
+12:33:24.638  [qtp301519784-19] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2e503c20] will not be managed by Spring
+12:33:24.640  [qtp301519784-19] DEBUG
+				findById:139 - ==>  Preparing: select * from ep_exception_info where id=? 
+12:33:24.653  [qtp301519784-19] DEBUG
+				findById:139 - ==> Parameters: 299(Long)
+12:33:24.661  [qtp301519784-19] DEBUG
+				findById:139 - <==      Total: 1
+12:33:24.665  [qtp301519784-19] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72476c5]
+12:33:31.799  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:33:31.804  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:33:31.852  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:33:31.867  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:33:31.878  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:55:55.097  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:55:55.102  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:57:25.991  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:57:25.996  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:57:26.042  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:57:26.056  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:57:26.066  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:58:06.491  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:58:06.497  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:58:06.554  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:58:06.573  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:58:06.584  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+12:59:57.512  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+12:59:57.517  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+12:59:57.568  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+12:59:57.583  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+12:59:57.593  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+13:31:57.803  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+13:31:57.811  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+13:31:57.892  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+13:31:57.920  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+13:31:57.939  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+13:32:45.332  [qtp1323324968-22] DEBUG
+				ExceptionInServiceImpl:46 - save: exceptionInfo=com.tcl.ep.persistence.entity.ExceptionInfo@58f4cfc[ip=127.0.0.1,id=<null>,exceptionName=com.tcl.mig.wemedia.common.exception.ParamException,occurTime=1479965563378,parameter=<null>,module=web,errorMsg=com.tcl.mig.wemedia.common.exception.ParamException: this is 啊 test
+	at com.tcl.mig.wemedia.biz.service.impl.UserServiceImpl.login(UserServiceImpl.java:79)
+	at com.tcl.mig.wemedia.biz.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$64710ee9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:651)
+	at com.tcl.mig.wemedia.biz.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$2ff8dcf4.login(<generated>)
+	at com.tcl.mig.wemedia.web.controller.UserController.login(UserController.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:114)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.tcl.mig.wemedia.web.filter.AuthFilter.doFilter(AuthFilter.java:97)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.tcl.ep.client.filter.EpClientFilter.doFilter(EpClientFilter.java:84)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+,uri=<null>,headers=<null>,requestMethod=<null>,projectId=1001,handlerMethod=login,handlerClass=com.tcl.mig.wemedia.biz.service.impl.UserServiceImpl,handlerLine=79,env=DEV,extraInfomation=<null>]
+13:32:45.337  [qtp1323324968-22] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+13:32:45.340  [qtp1323324968-22] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@554437a2] was not registered for synchronization because synchronization is not active
+13:32:45.513  [qtp1323324968-22] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1e7e5832] will not be managed by Spring
+13:32:45.518  [qtp1323324968-22] DEBUG
+				findByProjectId:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project where project_id = ? 
+13:32:45.536  [qtp1323324968-22] DEBUG
+				findByProjectId:139 - ==> Parameters: 1001(Long)
+13:32:45.549  [qtp1323324968-22] DEBUG
+				findByProjectId:139 - <==      Total: 0
+13:32:45.552  [qtp1323324968-22] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@554437a2]
+13:32:45.553  [qtp1323324968-22] ERROR
+				ExceptionInServiceImpl:50 - projectId=1001info is not exsist
+13:36:53.138  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+13:36:53.144  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+13:36:53.201  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+13:36:53.222  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+13:36:53.236  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:18:37.640  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:18:37.646  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:18:37.699  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:18:37.717  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:18:37.730  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:46:24.186  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:46:24.191  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:46:24.239  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:46:24.253  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:46:24.264  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:46:34.200  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:46:34.206  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:46:34.258  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:46:34.273  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:46:34.284  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:46:47.155  [qtp1323324968-109] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@3d4053eb[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:46:47.164  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:46:47.168  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fd7430d] was not registered for synchronization because synchronization is not active
+14:46:47.192  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fd7430d]
+14:47:36.368  [qtp1323324968-111] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@5d1b0a70[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:47:36.368  [qtp1323324968-111] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:47:36.368  [qtp1323324968-111] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a4a6ed1] was not registered for synchronization because synchronization is not active
+14:47:36.369  [qtp1323324968-111] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a4a6ed1]
+14:47:37.231  [qtp1323324968-112] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@412552b[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:47:37.231  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:47:37.231  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f957c23] was not registered for synchronization because synchronization is not active
+14:47:37.231  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f957c23]
+14:48:15.280  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:48:15.285  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:48:15.332  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:48:15.346  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:48:15.356  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:48:19.579  [qtp1323324968-113] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@6fee357a[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:48:19.625  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:48:19.628  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22734144] was not registered for synchronization because synchronization is not active
+14:48:19.881  [qtp1323324968-113] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7bb048a3] will not be managed by Spring
+14:48:19.882  [qtp1323324968-113] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:48:19.890  [qtp1323324968-113] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:48:19.897  [qtp1323324968-113] DEBUG
+				findTotal:139 - <==      Total: 1
+14:48:19.901  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22734144]
+14:48:19.901  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:48:19.901  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c194dc] was not registered for synchronization because synchronization is not active
+14:48:19.902  [qtp1323324968-113] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5dc8948f] will not be managed by Spring
+14:48:19.902  [qtp1323324968-113] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:48:19.902  [qtp1323324968-113] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:48:19.908  [qtp1323324968-113] DEBUG
+				findList:139 - <==      Total: 9
+14:48:19.908  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c194dc]
+14:48:19.908  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:48:19.909  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d365dc] was not registered for synchronization because synchronization is not active
+14:48:19.909  [qtp1323324968-113] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7b3f015f] will not be managed by Spring
+14:48:19.910  [qtp1323324968-113] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:48:19.910  [qtp1323324968-113] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:48:19.951  [qtp1323324968-113] DEBUG
+				findProjects:139 - <==      Total: 4
+14:48:19.951  [qtp1323324968-113] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d365dc]
+14:48:25.265  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:48:25.270  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:48:25.317  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:48:25.331  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:48:25.341  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:49:53.507  [qtp1323324968-109] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@338f9028[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:49:53.515  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:49:53.518  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c34db14] was not registered for synchronization because synchronization is not active
+14:49:53.665  [qtp1323324968-109] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6818be0c] will not be managed by Spring
+14:49:53.666  [qtp1323324968-109] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:49:53.676  [qtp1323324968-109] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:49:53.683  [qtp1323324968-109] DEBUG
+				findTotal:139 - <==      Total: 1
+14:49:53.686  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c34db14]
+14:49:53.687  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:49:53.687  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47f59abb] was not registered for synchronization because synchronization is not active
+14:49:53.687  [qtp1323324968-109] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@750e2b23] will not be managed by Spring
+14:49:53.688  [qtp1323324968-109] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:49:53.688  [qtp1323324968-109] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:49:53.694  [qtp1323324968-109] DEBUG
+				findList:139 - <==      Total: 9
+14:49:53.694  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47f59abb]
+14:49:53.695  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:49:53.695  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7eec7b46] was not registered for synchronization because synchronization is not active
+14:49:53.696  [qtp1323324968-109] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@27482fce] will not be managed by Spring
+14:49:53.696  [qtp1323324968-109] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:49:53.696  [qtp1323324968-109] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:49:53.698  [qtp1323324968-109] DEBUG
+				findProjects:139 - <==      Total: 4
+14:49:53.698  [qtp1323324968-109] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7eec7b46]
+14:52:07.148  [qtp1323324968-106] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@5fb9d90b[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:07.149  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:07.149  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22589246] was not registered for synchronization because synchronization is not active
+14:52:07.149  [qtp1323324968-106] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6b3cb666] will not be managed by Spring
+14:52:07.150  [qtp1323324968-106] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:07.150  [qtp1323324968-106] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:07.152  [qtp1323324968-106] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:07.152  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22589246]
+14:52:07.152  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:07.153  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a5f6130] was not registered for synchronization because synchronization is not active
+14:52:07.153  [qtp1323324968-106] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4382354f] will not be managed by Spring
+14:52:07.153  [qtp1323324968-106] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:07.154  [qtp1323324968-106] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:07.201  [qtp1323324968-106] DEBUG
+				findList:139 - <==      Total: 9
+14:52:07.202  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a5f6130]
+14:52:07.202  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:07.202  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@180339df] was not registered for synchronization because synchronization is not active
+14:52:07.203  [qtp1323324968-106] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@58a4b38c] will not be managed by Spring
+14:52:07.203  [qtp1323324968-106] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:07.203  [qtp1323324968-106] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:07.205  [qtp1323324968-106] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:07.205  [qtp1323324968-106] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@180339df]
+14:52:08.199  [qtp1323324968-117] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@7ab54e9a[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:08.200  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:08.200  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9f66] was not registered for synchronization because synchronization is not active
+14:52:08.200  [qtp1323324968-117] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@214d2868] will not be managed by Spring
+14:52:08.200  [qtp1323324968-117] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:08.201  [qtp1323324968-117] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:08.202  [qtp1323324968-117] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:08.202  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9f66]
+14:52:08.202  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:08.202  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@211cd7d2] was not registered for synchronization because synchronization is not active
+14:52:08.203  [qtp1323324968-117] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@42f3c724] will not be managed by Spring
+14:52:08.203  [qtp1323324968-117] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:08.203  [qtp1323324968-117] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:08.207  [qtp1323324968-117] DEBUG
+				findList:139 - <==      Total: 9
+14:52:08.207  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@211cd7d2]
+14:52:08.207  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:08.208  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1403b7bd] was not registered for synchronization because synchronization is not active
+14:52:08.208  [qtp1323324968-117] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@19c0c153] will not be managed by Spring
+14:52:08.208  [qtp1323324968-117] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:08.208  [qtp1323324968-117] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:08.210  [qtp1323324968-117] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:08.210  [qtp1323324968-117] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1403b7bd]
+14:52:09.005  [qtp1323324968-105] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@426c3cbe[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:09.006  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.006  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50080003] was not registered for synchronization because synchronization is not active
+14:52:09.006  [qtp1323324968-105] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6491a30d] will not be managed by Spring
+14:52:09.006  [qtp1323324968-105] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:09.007  [qtp1323324968-105] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:09.008  [qtp1323324968-105] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:09.008  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50080003]
+14:52:09.008  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.009  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@254efa88] was not registered for synchronization because synchronization is not active
+14:52:09.009  [qtp1323324968-105] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@55f8090f] will not be managed by Spring
+14:52:09.009  [qtp1323324968-105] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:09.010  [qtp1323324968-105] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:09.014  [qtp1323324968-105] DEBUG
+				findList:139 - <==      Total: 9
+14:52:09.014  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@254efa88]
+14:52:09.014  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.015  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17e8697e] was not registered for synchronization because synchronization is not active
+14:52:09.015  [qtp1323324968-105] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3c2aec60] will not be managed by Spring
+14:52:09.015  [qtp1323324968-105] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:09.016  [qtp1323324968-105] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:09.022  [qtp1323324968-105] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:09.023  [qtp1323324968-105] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17e8697e]
+14:52:09.856  [qtp1323324968-112] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@4528bcc6[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:09.857  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.857  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75818ea2] was not registered for synchronization because synchronization is not active
+14:52:09.857  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6428d70c] will not be managed by Spring
+14:52:09.858  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:09.858  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:09.859  [qtp1323324968-112] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:09.859  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75818ea2]
+14:52:09.860  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.860  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29b05d93] was not registered for synchronization because synchronization is not active
+14:52:09.860  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@22993724] will not be managed by Spring
+14:52:09.860  [qtp1323324968-112] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:09.861  [qtp1323324968-112] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:09.893  [qtp1323324968-112] DEBUG
+				findList:139 - <==      Total: 9
+14:52:09.894  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29b05d93]
+14:52:09.894  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:09.894  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b312d8e] was not registered for synchronization because synchronization is not active
+14:52:09.894  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@35e5b71d] will not be managed by Spring
+14:52:09.894  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:09.895  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:09.896  [qtp1323324968-112] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:09.896  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b312d8e]
+14:52:24.191  [qtp1323324968-110] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@6b1f9ece[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:24.192  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:24.192  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68f31d53] was not registered for synchronization because synchronization is not active
+14:52:24.192  [qtp1323324968-110] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@57144ea8] will not be managed by Spring
+14:52:24.193  [qtp1323324968-110] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:24.193  [qtp1323324968-110] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:24.195  [qtp1323324968-110] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:24.195  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68f31d53]
+14:52:24.195  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:24.195  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1119d97e] was not registered for synchronization because synchronization is not active
+14:52:24.195  [qtp1323324968-110] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@263025e5] will not be managed by Spring
+14:52:24.196  [qtp1323324968-110] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:24.196  [qtp1323324968-110] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:24.200  [qtp1323324968-110] DEBUG
+				findList:139 - <==      Total: 9
+14:52:24.200  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1119d97e]
+14:52:24.200  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:24.200  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ae9e97e] was not registered for synchronization because synchronization is not active
+14:52:24.200  [qtp1323324968-110] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@55dedce6] will not be managed by Spring
+14:52:24.201  [qtp1323324968-110] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:24.201  [qtp1323324968-110] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:24.203  [qtp1323324968-110] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:24.203  [qtp1323324968-110] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ae9e97e]
+14:52:48.241  [qtp1323324968-112] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@41b7c380[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:48.242  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:48.242  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7842a35] was not registered for synchronization because synchronization is not active
+14:52:48.243  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1e46d798] will not be managed by Spring
+14:52:48.243  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:48.243  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:48.244  [qtp1323324968-112] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:48.245  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7842a35]
+14:52:48.245  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:48.245  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec0dae9] was not registered for synchronization because synchronization is not active
+14:52:48.246  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1859e0f0] will not be managed by Spring
+14:52:48.246  [qtp1323324968-112] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:48.247  [qtp1323324968-112] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:48.253  [qtp1323324968-112] DEBUG
+				findList:139 - <==      Total: 9
+14:52:48.253  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec0dae9]
+14:52:48.253  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:48.254  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@394d93f4] was not registered for synchronization because synchronization is not active
+14:52:48.254  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7b0f2b48] will not be managed by Spring
+14:52:48.254  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:48.255  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:48.257  [qtp1323324968-112] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:48.257  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@394d93f4]
+14:52:49.645  [qtp1323324968-112] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@6703e108[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:52:49.646  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:49.647  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fab090e] was not registered for synchronization because synchronization is not active
+14:52:49.648  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1809db36] will not be managed by Spring
+14:52:49.649  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:49.649  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:49.650  [qtp1323324968-112] DEBUG
+				findTotal:139 - <==      Total: 1
+14:52:49.651  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fab090e]
+14:52:49.651  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:49.651  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d186b0c] was not registered for synchronization because synchronization is not active
+14:52:49.652  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6c0dc62c] will not be managed by Spring
+14:52:49.652  [qtp1323324968-112] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:52:49.652  [qtp1323324968-112] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:52:49.656  [qtp1323324968-112] DEBUG
+				findList:139 - <==      Total: 9
+14:52:49.656  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d186b0c]
+14:52:49.657  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:52:49.657  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b7cf389] was not registered for synchronization because synchronization is not active
+14:52:49.657  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7310232b] will not be managed by Spring
+14:52:49.657  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:52:49.658  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:52:49.659  [qtp1323324968-112] DEBUG
+				findProjects:139 - <==      Total: 4
+14:52:49.660  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b7cf389]
+14:53:28.644  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:53:28.650  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:53:28.702  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:53:28.723  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:53:28.735  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:53:38.310  [qtp1323324968-134] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@34dda9fc[projectId=<null>,exceptionName=<null>,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+14:53:38.318  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:53:38.320  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@493a78b7] was not registered for synchronization because synchronization is not active
+14:53:38.463  [qtp1323324968-134] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7c71025f] will not be managed by Spring
+14:53:38.465  [qtp1323324968-134] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:53:38.474  [qtp1323324968-134] DEBUG
+				findTotal:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:53:38.481  [qtp1323324968-134] DEBUG
+				findTotal:139 - <==      Total: 1
+14:53:38.484  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@493a78b7]
+14:53:38.484  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:53:38.485  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@248fb9da] was not registered for synchronization because synchronization is not active
+14:53:38.485  [qtp1323324968-134] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7c748295] will not be managed by Spring
+14:53:38.485  [qtp1323324968-134] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 limit ?,? 
+14:53:38.485  [qtp1323324968-134] DEBUG
+				findList:139 - ==> Parameters: 0(Integer), 30(Integer)
+14:53:38.490  [qtp1323324968-134] DEBUG
+				findList:139 - <==      Total: 9
+14:53:38.490  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@248fb9da]
+14:53:38.490  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+14:53:38.491  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c7142df] was not registered for synchronization because synchronization is not active
+14:53:38.491  [qtp1323324968-134] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4a71de4f] will not be managed by Spring
+14:53:38.492  [qtp1323324968-134] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+14:53:38.492  [qtp1323324968-134] DEBUG
+				findProjects:139 - ==> Parameters: 
+14:53:38.494  [qtp1323324968-134] DEBUG
+				findProjects:139 - <==      Total: 4
+14:53:38.494  [qtp1323324968-134] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c7142df]
+14:53:48.479  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:53:48.484  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:53:48.532  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:53:48.545  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:53:48.559  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+14:56:19.946  [Scanner-0] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+14:56:19.951  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+14:56:19.999  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+14:56:20.012  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+14:56:20.021  [Scanner-0] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'
+15:01:24.980  [qtp1323324968-108] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@c3ffb55[projectId=<null>,exceptionName=NestedServletException,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+15:01:24.987  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:01:24.989  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8f14d4] was not registered for synchronization because synchronization is not active
+15:01:25.131  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@55f79657] will not be managed by Spring
+15:01:25.133  [qtp1323324968-108] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:01:25.142  [qtp1323324968-108] DEBUG
+				findTotal:139 - ==> Parameters: NestedServletException(String), 0(Integer), 30(Integer)
+15:01:25.148  [qtp1323324968-108] DEBUG
+				findTotal:139 - <==      Total: 1
+15:01:25.151  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8f14d4]
+15:01:25.152  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:01:25.152  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7456b9b5] was not registered for synchronization because synchronization is not active
+15:01:25.152  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4853632c] will not be managed by Spring
+15:01:25.152  [qtp1323324968-108] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:01:25.153  [qtp1323324968-108] DEBUG
+				findList:139 - ==> Parameters: NestedServletException(String), 0(Integer), 30(Integer)
+15:01:25.158  [qtp1323324968-108] DEBUG
+				findList:139 - <==      Total: 7
+15:01:25.158  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7456b9b5]
+15:01:25.158  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:01:25.158  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58ed7828] was not registered for synchronization because synchronization is not active
+15:01:25.159  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@65a8f941] will not be managed by Spring
+15:01:25.159  [qtp1323324968-108] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+15:01:25.159  [qtp1323324968-108] DEBUG
+				findProjects:139 - ==> Parameters: 
+15:01:25.161  [qtp1323324968-108] DEBUG
+				findProjects:139 - <==      Total: 4
+15:01:25.161  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58ed7828]
+15:02:20.418  [qtp1323324968-108] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@705c6302[projectId=<null>,exceptionName=NestedServletException,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=30]
+15:02:20.419  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:02:20.419  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@416851ef] was not registered for synchronization because synchronization is not active
+15:02:20.419  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2c29cac4] will not be managed by Spring
+15:02:20.420  [qtp1323324968-108] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:02:20.420  [qtp1323324968-108] DEBUG
+				findTotal:139 - ==> Parameters: NestedServletException(String), 0(Integer), 30(Integer)
+15:02:20.421  [qtp1323324968-108] DEBUG
+				findTotal:139 - <==      Total: 1
+15:02:20.421  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@416851ef]
+15:02:20.422  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:02:20.422  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a3adcc] was not registered for synchronization because synchronization is not active
+15:02:20.422  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2936092d] will not be managed by Spring
+15:02:20.422  [qtp1323324968-108] DEBUG
+				findList:139 - ==>  Preparing: select ee.id,ee.project_id, exception_name, occur_time, parameter, module,error_msg, uri, headers, request_method, ip,handler_method,handler_class,handler_line,env,extra_information ,project_name from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:02:20.423  [qtp1323324968-108] DEBUG
+				findList:139 - ==> Parameters: NestedServletException(String), 0(Integer), 30(Integer)
+15:02:20.426  [qtp1323324968-108] DEBUG
+				findList:139 - <==      Total: 7
+15:02:20.427  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a3adcc]
+15:02:20.427  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:02:20.427  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c80067f] was not registered for synchronization because synchronization is not active
+15:02:20.427  [qtp1323324968-108] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@248943be] will not be managed by Spring
+15:02:20.427  [qtp1323324968-108] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+15:02:20.428  [qtp1323324968-108] DEBUG
+				findProjects:139 - ==> Parameters: 
+15:02:20.430  [qtp1323324968-108] DEBUG
+				findProjects:139 - <==      Total: 4
+15:02:20.430  [qtp1323324968-108] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c80067f]
+15:02:27.990  [qtp1323324968-112] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@329d8f94[projectId=<null>,exceptionName=pa,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=3]
+15:02:27.991  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:02:27.991  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63d5782] was not registered for synchronization because synchronization is not active
+15:02:27.991  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@536f7af3] will not be managed by Spring
+15:02:27.991  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:02:27.992  [qtp1323324968-112] DEBUG
+				findTotal:139 - ==> Parameters: pa(String), 0(Integer), 3(Integer)
+15:02:27.993  [qtp1323324968-112] DEBUG
+				findTotal:139 - <==      Total: 1
+15:02:27.994  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63d5782]
+15:02:27.994  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:02:27.994  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58ee6042] was not registered for synchronization because synchronization is not active
+15:02:27.994  [qtp1323324968-112] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5d1635a6] will not be managed by Spring
+15:02:27.994  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+15:02:27.995  [qtp1323324968-112] DEBUG
+				findProjects:139 - ==> Parameters: 
+15:02:27.996  [qtp1323324968-112] DEBUG
+				findProjects:139 - <==      Total: 4
+15:02:27.996  [qtp1323324968-112] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58ee6042]
+15:03:10.569  [qtp1323324968-154] DEBUG
+				ExceptionInServiceImpl:126 - Search parameters are:com.tcl.ep.persistence.vo.ExceptionSearchReq@113ab1fd[projectId=<null>,exceptionName=pa,startDate=<null>,endDate=<null>,module=<null>,env=<null>,errorMsg=<null>,pageNo=1,pageSize=3]
+15:03:10.570  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:03:10.570  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@247b61e1] was not registered for synchronization because synchronization is not active
+15:03:10.571  [qtp1323324968-154] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1010355] will not be managed by Spring
+15:03:10.571  [qtp1323324968-154] DEBUG
+				findTotal:139 - ==>  Preparing: select count(1) from ep_exception_info ee join ep_project ep on ee.project_id=ep.project_id where 1=1 and ee.exception_name=? limit ?,? 
+15:03:10.571  [qtp1323324968-154] DEBUG
+				findTotal:139 - ==> Parameters: pa(String), 0(Integer), 3(Integer)
+15:03:10.572  [qtp1323324968-154] DEBUG
+				findTotal:139 - <==      Total: 1
+15:03:10.573  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@247b61e1]
+15:03:10.573  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:104 - Creating a new SqlSession
+15:03:10.573  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:140 - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cf8665] was not registered for synchronization because synchronization is not active
+15:03:10.573  [qtp1323324968-154] DEBUG
+				SpringManagedTransaction:86 - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7ca38ab8] will not be managed by Spring
+15:03:10.573  [qtp1323324968-154] DEBUG
+				findProjects:139 - ==>  Preparing: select id, project_id, project_name, to_emails, to_phones, warn_exception from ep_project WHERE 1 = 1 
+15:03:10.574  [qtp1323324968-154] DEBUG
+				findProjects:139 - ==> Parameters: 
+15:03:10.576  [qtp1323324968-154] DEBUG
+				findProjects:139 - <==      Total: 4
+15:03:10.577  [qtp1323324968-154] DEBUG
+				SqlSessionUtils:168 - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cf8665]
+15:18:38.989  [main] DEBUG
+				LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+15:18:38.998  [main] DEBUG
+				SqlSessionFactoryBean:362 - Property 'configLocation' not specified, using default MyBatis Configuration
+15:18:39.082  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ExceptionInfoMapper.xml]'
+15:18:39.111  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/ProjectMapper.xml]'
+15:18:39.131  [main] DEBUG
+				SqlSessionFactoryBean:472 - Parsed mapper file: 'file [/data/workspace/code/eapa/persistence/target/classes/mapper/UserMapper.xml]'

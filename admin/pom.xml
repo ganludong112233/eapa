@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.tcl.eapa</groupId>
+    <artifactId>eapa</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ep-admin</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.tcl.eapa</groupId>
+      <artifactId>ep-biz</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <!--freemarker -->
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>com.tcl.eapa</groupId>
+          <artifactId>ep-client</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+  </dependencies>
+  <build>
+    <finalName>admin</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.2.1.v20140609</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webAppConfig>
+            <contextPath>/admin</contextPath>
+            <extraClasspath>${basedir}/../common/target/classes;${basedir}/../persistence/target/classes;${basedir}/../biz/target/classes</extraClasspath>
+          </webAppConfig>
+          <httpConnector>
+            <port>8090</port>
+            <idleTimeout>15000</idleTimeout>
+          </httpConnector>
+        </configuration>
+      </plugin>
+    </plugins>
+    <!-- 资源源文件 -->
+		<filters>
+			<filter>../${enviroment}/serverConfig.properties</filter>
+		</filters>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>serverConfig.properties</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+</project>

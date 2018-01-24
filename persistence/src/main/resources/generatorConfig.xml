@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- <classPathEntry location="/data/software/eclipse/thirdpart_plugin/mysql-connector-java-5.1.26.jar" /> -->
+    <classPathEntry location="/data/home/huan.yang/.m2/repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar" />
+
+    <context id="context1" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
+        </commentGenerator>
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.115.113.240:3308/eapa?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true"
+            userId="develop" password="Aa123456" />
+
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator
+             targetPackage="com.tcl.iread.persistence.entity" 
+             targetProject="/data/workspace/code/eapa/eapa-persistence/src/main/java"
+         />
+         
+        <sqlMapGenerator 
+            targetPackage="mapper" 
+            targetProject="/data/workspace/code/eapa/eapa-persistence/src/main/resources"
+        />
+        
+        <javaClientGenerator 
+            targetPackage="com.tcl.iread.persistence.dao" 
+            targetProject="/data/workspace/code/eapa/eapa-persistence/src/main/java"
+            type="XMLMAPPER"
+         />
+        
+        
+      <!--<table tableName="ir_hotword_source" domainObjectName="HotWordSource" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"  />-->
+      <table tableName="ep_project_module" domainObjectName="ProjectModule" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"  />
+      
+   </context>
+</generatorConfiguration>

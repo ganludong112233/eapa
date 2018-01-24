@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table {
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-collapse: collapse;
+}
+
+table th,table td {
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 8px;
+	text-align: left;
+}
+
+table th {
+	background-color: #dedede;
+}
+</style>
+</head>
+<body>
+	<div>
+		<h3>Dear %TARGET%:</h3>
+		<p>The %MOUDLE% OF %PROJECT% occured exception. Please handle it asap.</p>
+		<table>
+			<tr>
+				<th>Project ID</th>
+				<th>Project Name</th>
+				<th>Module</th>
+				<th>Exception Name</th>
+				<th>Request UrI</th>
+				<th>Request Method</th>
+				<th>Handler Class</th>
+				<th>Paramter</th>
+				<th>Headers</th>
+				<th>Handler Method</th>
+				<th>Error Message</th>
+				<th>Occur Time</th>
+				<th>IP</th>
+			</tr>
+			<tr>
+				<th>PROJECT_ID</th>
+				<td>%PROJECT_NAME%</td>
+				<td>%MODULE%</td>
+				<td>%EXCEPTION_NAME%</td>
+				<td>%REQUEST_URI%</td>
+				<td>%REQUEST_METHOD%</td>
+				<td>%HANDLER_CLASS%</td>
+				<td>%PARAMTER%</td>
+				<td>%HEADERS%</td>
+				<td>%HANDLER_METHOD%</td>
+				<td>%ERROR_MESSAGE%</td>
+				<td>%OCCUR_TIME%</td>
+				<td>%IP%</td>
+			</tr>
+		</table>
+		<p>
+			BR,<br /> Credite Project Team
+		</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tcl.ep.persistence.dao.ExceptionStatisticDao">
+	<resultMap id="BaseResultMap" type="com.tcl.ep.persistence.vo.ExceptionModuleStatisticDto">
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="module" property="module" jdbcType="VARCHAR" />
+		<result column="test_exception_total" property="testExceptionTotal" jdbcType="INTEGER"/>
+		<result column="pro_exception_total" property="proExceptionTotal" jdbcType="INTEGER"/>
+		<result column="exception_total" property="exceptionTotal" jdbcType="INTEGER"/>
+	</resultMap>
+
+	<select id="findStatisticException" resultMap="BaseResultMap">
+		SELECT p.project_name,module,
+		  SUM(IF(ei.env = 'TEST',1,0)) AS test_exception_total,
+		  SUM(IF(ei.env = 'PROD',1,0)) AS pro_exception_total,
+		  SUM(IF(ei.env = 'PROD' or ei.env = 'TEST',1,0)) AS exception_total
+		FROM ep_exception_info ei
+		INNER JOIN ep_project p ON ei.project_id = p.project_id AND ei.occur_time BETWEEN #{startDate} AND #{endDate}
+		WHERE p.status=0
+		GROUP BY project_name,module
+		<if test="projectName != null">
+			HAVING p.project_name = #{projectName}
+		</if>
+	</select>
+
+	<select id="findExceptionTrend" resultType="com.tcl.ep.persistence.vo.ExceptionTrendDto">
+		SELECT project_name AS projectName,module, FROM_UNIXTIME(occur_time/1000,'%Y-%m-%d') AS date,
+			SUM(IF(ei.env = 'TEST',1,0)) AS testExceptionDayTotal,
+			SUM(IF(ei.env = 'PROD',1,0)) AS proExceptionDayTotal
+		FROM ep_exception_info ei
+			INNER JOIN ep_project p ON ei.project_id = p.project_id
+				  AND ei.occur_time BETWEEN #{startDate} AND #{endDate}
+		WHERE p.status=0
+		GROUP BY project_name,module,date
+			HAVING p.project_name = #{projectName} AND module = #{module}
+	</select>
+</mapper>

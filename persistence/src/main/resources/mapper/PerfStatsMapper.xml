@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tcl.ep.persistence.dao.PerfStatsDao">
+	<resultMap id="BaseResultMap" type="com.tcl.ep.persistence.vo.PerfStatsDto">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="project_id" property="projectId" jdbcType="BIGINT" />
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="env" property="env" jdbcType="VARCHAR" />
+		<result column="top5_trace_ids" property="top5TraceIds"
+			jdbcType="VARCHAR" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="api" property="api" jdbcType="VARCHAR" />
+		<result column="class_name" property="className" jdbcType="VARCHAR" />
+		<result column="method_name" property="methodName" jdbcType="VARCHAR" />
+		<result column="signature" property="signature" jdbcType="VARCHAR" />
+		<result column="call_count" property="callCount" jdbcType="INTEGER" />
+		<result column="max_cost_time" property="maxCostTime" jdbcType="INTEGER" />
+		<result column="min_cost_time" property="minCostTime" jdbcType="INTEGER" />
+		<result column="avg_cost_time" property="avgCostTime" jdbcType="INTEGER" />
+		<result column="start_time" property="startTime" jdbcType="BIGINT" />
+		<result column="end_time" property="endTime" jdbcType="BIGINT" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, project_id, env, top5_trace_ids, ip, api, class_name,
+		method_name,
+		signature,
+		call_count, max_cost_time, min_cost_time,
+		avg_cost_time, start_time, end_time
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select	<include refid="Base_Column_List" />
+		from ep_perf_stats
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+
+	<select id="findTopApiStatsList" resultType="com.tcl.ep.persistence.entity.PerfStats">
+		select api,sum(call_count) as callCount,sum(call_count*avg_cost_time)/sum(call_count) as avgCostTime
+		from ep_perf_stats where project_id=#{projectId}
+		and api is not null 
+			<if test="startDate!=0">
+			and start_time &gt;=#{startDate} 
+			</if>
+			<if test="endDate!=0">
+			and end_time &lt;=#{endDate}
+			</if>
+		group by api 
+		order by call_count desc
+		limit 0,#{topNumber}
+	</select>
+
+	<select id="findApiRespSpeedsList" resultType="java.util.Map">
+		select	elt(interval(d.avg_cost_time, 0, 100, 500),'normal','slow','abnormal') as timeKey, sum(call_count) as value
+		from ep_perf_stats d
+		where project_id=#{projectId} and d.api = #{api} 
+			<if test="startDate!=0">
+			and d.start_time &gt;=#{startDate} 
+			</if>
+			<if test="endDate!=0">
+			and d.end_time &lt;=#{endDate}
+			</if>
+		group by elt(interval(d.avg_cost_time, 0, 100,500),'normal','slow','abnormal');
+	</select>
+
+	<select id="findCallCountList" resultType="com.tcl.ep.persistence.vo.CallCountStatictic">
+		SELECT	sum(call_count)	as callCount,FROM_UNIXTIME(start_time/1000,#{timeFormat}) AS time,sum(call_count)/(24*60) as tpm
+		FROM ep_perf_stats d
+		WHERE d.project_id=#{projectId}
+		GROUP BY time order by time limit #{day};
+	</select>
+
+	<select id="findPeakTime" resultType="java.util.Map">
+		SELECT 	FROM_UNIXTIME(start_time / 1000, '%H:%i') AS startTime,	FROM_UNIXTIME(end_time / 1000, '%H:%i') AS endTime
+		FROM ep_perf_stats
+		WHERE project_id = #{projectId} and start_time &gt;=#{startDate}
+		  and end_time &lt;=#{endDate}
+		GROUP BY startTime, endTime 
+		order by sum(call_count) desc limit 1;
+	</select>
+
+	<select id="findTotal" resultType="java.lang.Integer">
+		select count(1) from ep_perf_stats where 1=1 
+		<if test="startDate!=0">
+		and start_time &gt;=#{startDate} 
+		</if>
+		<if test="endDate!=0">
+		and end_time &lt;=#{endDate}
+		</if>
+		<if test="params.projectId!=null ">
+			and project_id=#{params.projectId}
+		</if>
+		<if test="params.ip!=null and params.ip!=''">
+			and ip=#{params.ip}
+		</if>
+		<if test="params.api!=null and params.api!=''">
+			and api like CONCAT('%',#{params.api},'%')
+		</if>
+		<if test="params.className!=null and params.className!=''">
+			and class_name like CONCAT('%',#{params.className},'%')
+		</if>
+		<if test="params.methodName!=null and params.methodName!=''">
+			and method_name=#{params.methodName}
+		</if>
+		<if test="params.callCount!=null and params.callCount!=0">
+			and call_count=#{params.callCount}
+		</if>
+		<if test="params.avgCostTime!=null and params.avgCostTime!=''">
+			and avg_cost_time=#{params.avgCostTime}
+		</if>
+
+	</select>
+
+	<select id="findList" resultMap="BaseResultMap">
+		select ep_perf_stats.id,
+		ep_perf_stats.project_id, env, top5_trace_ids, ip, api,
+		class_name, method_name, signature,
+		call_count, max_cost_time,
+		min_cost_time, avg_cost_time, start_time,
+		end_time,project_name as
+		projectName
+		from ep_perf_stats ,ep_project where
+		ep_perf_stats.project_id=ep_project.project_id
+		<if test="startDate!=0">
+		and start_time &gt;=#{startDate} 
+		</if>
+		<if test="endDate!=0">
+		and end_time &lt;=#{endDate}
+		</if>
+		<if test="params.projectId!=null ">
+			and project_id=#{params.projectId}
+		</if>
+		<if test="params.ip!=null and params.ip!=''">
+			and ip=#{params.ip}
+		</if>
+		<if test="params.api!=null and params.api!=''">
+			and api like CONCAT('%',#{params.api},'%')
+		</if>
+		<if test="params.className!=null and params.className!=''">
+			and class_name like CONCAT('%',#{params.className},'%')
+		</if>
+		<if test="params.methodName!=null and params.methodName!=''">
+			and method_name=#{params.methodName}
+		</if>
+		<if test="params.callCount!=null and params.callCount!=0">
+			and call_count=#{params.callCount}
+		</if>
+		<if test="params.avgCostTime!=null and params.avgCostTime!=''">
+			and avg_cost_time=#{params.avgCostTime}
+		</if>
+		order by end_time desc
+		limit #{params.startItem},#{params.pageSize}
+	</select>
+
+	<insert id="insert" parameterType="com.tcl.ep.persistence.entity.PerfStats">
+		insert into
+		ep_perf_stats (id, project_id, env,
+		top5_trace_ids, ip,
+		api,
+		class_name, method_name, signature,
+		call_count, max_cost_time,
+		min_cost_time,
+		avg_cost_time, start_time, end_time
+		)
+		values
+		(#{id,jdbcType=BIGINT}, #{projectId,jdbcType=BIGINT},
+		#{env,jdbcType=VARCHAR},
+		#{top5TraceIds,jdbcType=VARCHAR},
+		#{ip,jdbcType=VARCHAR}, #{api,jdbcType=VARCHAR},
+		#{className,jdbcType=VARCHAR}, #{methodName,jdbcType=VARCHAR},
+		#{signature,jdbcType=VARCHAR},
+		#{call_count,jdbcType=INTEGER},
+		#{maxCostTime,jdbcType=INTEGER}, #{minCostTime,jdbcType=INTEGER},
+		#{avgCostTime,jdbcType=INTEGER}, #{startTime,jdbcType=BIGINT},
+		#{endTime,jdbcType=BIGINT}
+		)
+	</insert>
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into ep_perf_stats (project_id, env,
+		top5_trace_ids, ip, api,
+		class_name, method_name, signature,
+		call_count, max_cost_time, min_cost_time,
+		avg_cost_time, start_time,
+		end_time)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(#{item.projectId,jdbcType=BIGINT},
+			#{item.env,jdbcType=VARCHAR},
+			#{item.top5TraceIds,jdbcType=VARCHAR},
+			#{item.ip,jdbcType=VARCHAR}, #{item.api,jdbcType=VARCHAR},
+			#{item.className,jdbcType=VARCHAR},
+			#{item.methodName,jdbcType=VARCHAR},
+			#{item.signature,jdbcType=VARCHAR},
+			#{item.callCount,jdbcType=INTEGER},
+			#{item.maxCostTime,jdbcType=INTEGER},
+			#{item.minCostTime,jdbcType=INTEGER},
+			#{item.avgCostTime,jdbcType=INTEGER},
+			#{item.startTime,jdbcType=BIGINT}, #{item.endTime,jdbcType=BIGINT}
+			)
+		</foreach>
+	</insert>
+
+</mapper>
