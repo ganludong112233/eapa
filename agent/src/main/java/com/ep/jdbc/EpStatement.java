@@ -11,17 +11,15 @@ import com.ep.model.SQLPerf;
 public class EpStatement implements Statement {
     private Connection connection;
     private Statement statement;
-    private String originalSql;
 
-    public EpStatement(Connection connection, Statement statement, String sql) {
+    public EpStatement(Connection connection, Statement statement) {
         this.connection = connection;
         this.statement = statement;
-        this.originalSql = sql;
     }
 
     @Override
     public ResultSet executeQuery(String sql) throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(sql, originalSql));
+        SQLPerf perf = SQLTracer.start(sql);
         try {
             return statement.executeQuery(sql);
         } finally {
@@ -73,11 +71,11 @@ public class EpStatement implements Statement {
 
     @Override
     public boolean execute(String sql) throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(sql, originalSql));
+        SQLPerf perf = SQLTracer.start(sql);
         try {
             return statement.execute(sql);
         } finally {
-            SQLTracer.end(perf);
+             SQLTracer.end(perf);
         }
     }
 

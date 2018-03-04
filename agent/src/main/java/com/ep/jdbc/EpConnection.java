@@ -38,7 +38,7 @@ public class EpConnection implements Connection {
 
     @Override
     public Statement createStatement() throws SQLException {
-        return new EpStatement(this, connection.createStatement(), null);
+        return new EpStatement(this, connection.createStatement());
     }
 
     @Override
@@ -145,7 +145,7 @@ public class EpConnection implements Connection {
             throws SQLException {
 
         return new EpStatement(connection, connection.createStatement(resultSetType,
-                resultSetConcurrency), null);
+                resultSetConcurrency));
     }
 
     @Override
@@ -213,7 +213,7 @@ public class EpConnection implements Connection {
             int resultSetHoldability) throws SQLException {
 
         return new EpStatement(connection, connection.createStatement(resultSetType,
-                resultSetConcurrency, resultSetHoldability), null);
+                resultSetConcurrency, resultSetHoldability));
     }
 
     @Override

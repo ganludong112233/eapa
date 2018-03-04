@@ -44,7 +44,7 @@ public class EpCallableStatement implements CallableStatement {
 
     @Override
     public boolean execute() throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(null, originalSql));
+        SQLPerf perf = SQLTracer.start(originalSql);
         try {
             return statement.execute();
         } finally {

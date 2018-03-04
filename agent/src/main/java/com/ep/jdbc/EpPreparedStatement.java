@@ -43,7 +43,7 @@ public class EpPreparedStatement implements PreparedStatement {
 
     @Override
     public boolean execute() throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(null, originalSql));
+        SQLPerf perf = SQLTracer.start(originalSql);
         try {
             return statement.execute();
         } finally {
@@ -63,7 +63,7 @@ public class EpPreparedStatement implements PreparedStatement {
 
     @Override
     public ResultSet executeQuery(String sql) throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(null, originalSql));
+        SQLPerf perf = SQLTracer.start(sql);
         try {
             return statement.executeQuery(sql);
         } finally {
@@ -113,7 +113,7 @@ public class EpPreparedStatement implements PreparedStatement {
 
     @Override
     public boolean execute(String sql) throws SQLException {
-        SQLPerf perf = SQLTracer.start(SQLFormater.format(sql, originalSql));
+        SQLPerf perf = SQLTracer.start(sql);
         try {
             return statement.execute(sql);
         } finally {
