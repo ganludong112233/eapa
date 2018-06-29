@@ -105,7 +105,6 @@ public class EPClassTransformer extends FilterClassTransformer {
                 return classfileBuffer;
             }
         }
-
         byte[] transformed = null;
         InputStream classIs = null;
         CtClass clazz = null;

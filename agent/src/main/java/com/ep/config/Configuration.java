@@ -74,6 +74,10 @@ public class Configuration {
     public static String getServerEnv() {
         return propParser.getString("env");
     }
+    
+    public static boolean isDebug() {
+        return propParser.getBoolean("debug");
+    }
 
     public static String getIgnoredPkgs() {
         return propParser.getString(INGORE_PKGS_KEY);

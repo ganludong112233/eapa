@@ -9,6 +9,7 @@ import javassist.CtClass;
 import javassist.CtMethod;
 import javassist.NotFoundException;
 
+import com.ep.config.Configuration;
 import com.ep.inst.MonitorValidator;
 import com.ep.inst.Weaver;
 
@@ -41,6 +42,9 @@ public abstract class AbstractWeaver implements Weaver {
     public void weave(CtClass clazz, CtMethod method, ClassPool pool) throws CannotCompileException,NotFoundException {
         if (!isEligible(clazz, method)) {
             return;
+        }
+        if(Configuration.isDebug()){
+            System.out.println("DEBUG:EAPA:weave:class:"+clazz.getName()+":method:"+method.getName());
         }
         doWeave(clazz, method, pool);
     }
