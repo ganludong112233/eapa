@@ -75,6 +75,7 @@ public class EPClassTransformer extends FilterClassTransformer {
         filteredMethod.put("wait", null);
         filteredMethod.put("toString", null);
         filteredMethod.put("equals", null);
+        filteredMethod.put("clone", null);
         filteredMethod.put("finalize", null);
         filteredMethod.put("wait", null);
     }

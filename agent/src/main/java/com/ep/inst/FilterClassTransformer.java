@@ -25,9 +25,8 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
     static Map<String, Object> loadedUrls = new Hashtable<String, Object>();
     static Set<ClassLoader> loadedClassLoaders = new HashSet<ClassLoader>();
     public ClassPool pool = ClassPool.getDefault();
-    public String[] defaultFilterUrls = new String[] {"sun/launcher", "sun/net", "sun/util",
-            "sun/management", "sun/misc", "sun/reflect", "com/sun", "$Proxy", "java/lang",
-            "com/sun/proxy", "CGLIB$$", "com/ep"};
+    public String[] defaultFilterUrls = new String[] {"sun/", "sun/management", "$Proxy",
+            "java/lang", "com/sun/proxy", "CGLIB$$", "com/ep"};
 
     public abstract byte[] doTransform(ClassLoader loader, String className,
             Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer)
@@ -52,7 +51,12 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
                         if (!loadedUrls.containsKey(url.getPath())) {
                             try {
                                 loadedUrls.put(url.getPath(), "");
-                                pool.insertClassPath(url.getPath());
+                                if (Configuration.isDebug()) {
+                                    System.out.println("DEBUG:EAPA:loaderPath:"
+                                            + url.toURI().getPath());
+                                }
+
+                                pool.insertClassPath(url.toURI().getPath());
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
