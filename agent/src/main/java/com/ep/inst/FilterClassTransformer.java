@@ -37,9 +37,9 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
             ProtectionDomain protectionDomain, byte[] classfileBuffer)
             throws IllegalClassFormatException {
 
-        if (Configuration.isDebug()) {
-            System.out.println("DEBUG:EAPA:" + "class:" + className + ":Loader:" + loader);
-        }
+        // if (Configuration.isDebug()) {
+        // System.out.println("DEBUG:EAPA:" + "class:" + className + ":Loader:" + loader);
+        // }
 
         if (loader != null && !loadedClassLoaders.contains(loader)) {
             loadedClassLoaders.add(loader);
