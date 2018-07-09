@@ -12,17 +12,18 @@
     		http://www.springframework.org/schema/hadoop/spring-hadoop.xsd">
 
 	<context:component-scan base-package="com.tcl.ep.persistence" />
-	
+
 	<hdp:configuration />
-	
-	<hdp:hbase-configuration 
-		zk-quorum="${hbase.host}" 
-		zk-port="${hbase.port}" 
-		delete-connection="false"
-	/>
-		
+
+	<hdp:hbase-configuration zk-quorum="${hbase.host}"
+		zk-port="${hbase.port}" delete-connection="false">
+		hbase.rpc.timeout=1000
+		hbase.client.retries.number=1
+		hbase.client.operation.timeout=1000
+	</hdp:hbase-configuration>
+
 	<bean id="htemplate" class="org.springframework.data.hadoop.hbase.HbaseTemplate">
 		<property name="configuration" ref="hbaseConfiguration" />
 	</bean>
-	
+
 </beans>
