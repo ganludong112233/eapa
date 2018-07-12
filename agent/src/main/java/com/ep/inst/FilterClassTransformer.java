@@ -2,17 +2,14 @@ package com.ep.inst;
 
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.security.ProtectionDomain;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
 
-import com.ep.config.Configuration;
-
 import javassist.ClassPool;
+import javassist.LoaderClassPath;
 
 /**
  * filtered class transformer
@@ -43,7 +40,8 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
 
         if (loader != null && !loadedClassLoaders.contains(loader)) {
             loadedClassLoaders.add(loader);
-
+            pool.insertClassPath(new LoaderClassPath(loader));
+            /*
             if (loader != null && loader instanceof URLClassLoader) {
                 URLClassLoader urlCl = (URLClassLoader) loader;
                 while (urlCl != null) {
@@ -52,11 +50,13 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
                             try {
                                 loadedUrls.put(url.getPath(), "");
                                 if (Configuration.isDebug()) {
-                                    System.out.println("DEBUG:EAPA:loaderPath:"
-                                            + url.toURI().getPath());
+                                    System.out.println("DEBUG:EAPA:loaderPath:" + url.getPath());
                                 }
-
+                                // url.toURI.getPath() maybe get null value if path like :
+                                // jar:file://xxxx/xx format. this code has issue , so replace it
+                                // use pool.insertClassPath(new LoaderClassPath(loader));
                                 pool.insertClassPath(url.toURI().getPath());
+                                // has issue for jar/directory class load
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -67,7 +67,7 @@ public abstract class FilterClassTransformer implements ClassFileTransformer {
                         urlCl = (URLClassLoader) urlCl.getParent();
                     } catch (Exception e) {}
                 }
-            }
+            }*/
         }
 
         for (String url : defaultFilterUrls) {
