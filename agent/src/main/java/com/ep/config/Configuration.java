@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import com.ep.util.PropertiesParser;
+
 /**
  * 
  * @author yi_liu
@@ -38,6 +39,7 @@ public class Configuration {
                             .getPath();
             String propLocation =
                     jarPath.substring(0, jarPath.lastIndexOf("/")) + "/eapa.properties";
+            System.out.println("read propertie file:" + propLocation);
             userInputStream = new FileInputStream(propLocation);
             prop.load(userInputStream);
         } catch (FileNotFoundException e) {
@@ -74,7 +76,7 @@ public class Configuration {
     public static String getServerEnv() {
         return propParser.getString("env");
     }
-    
+
     public static boolean isDebug() {
         return propParser.getBoolean("debug");
     }
